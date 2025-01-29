@@ -45,12 +45,6 @@ const App = () => {
   }
 
 
-  const sortTasks = () => {
-    if(sort === "All") return todos;
-    if(sort === "Active") return todos.filter(todo => todo.completed === false);
-    if(sort === "Completed") return todos.filter(todo => todo.completed === true);
-  } 
-
 
   const handleTodoAdd = (e) => {
     if (e.keyCode === 13) {
@@ -174,10 +168,6 @@ const filteredTodos = data.filter(todo => {
         <button className='clear-btn' onClick={clearCompletedTasks}>Clear completed</button>
       </div>
     </div>
-    // <div>
-    //   <UserList />
-    //   <PostList />
-    // </div>
   )
 }
 
